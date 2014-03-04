@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0763B5C218C653BE007F783C /* Rules and Card Lists.pages in Resources */ = {isa = PBXBuildFile; fileRef = 0763B5C118C653BE007F783C /* Rules and Card Lists.pages */; };
+		07B8C02518C6553600196B91 /* TurnEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8C02418C6553600196B91 /* TurnEngine.m */; };
 		07CA04CA18C1837A00FA0BCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04C918C1837A00FA0BCB /* Foundation.framework */; };
 		07CA04CC18C1837A00FA0BCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04CB18C1837A00FA0BCB /* CoreGraphics.framework */; };
 		07CA04CE18C1837A00FA0BCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04CD18C1837A00FA0BCB /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		0763B5C118C653BE007F783C /* Rules and Card Lists.pages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Rules and Card Lists.pages"; sourceTree = "<group>"; };
+		07B8C02318C6553600196B91 /* TurnEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnEngine.h; sourceTree = "<group>"; };
+		07B8C02418C6553600196B91 /* TurnEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnEngine.m; sourceTree = "<group>"; };
 		07CA04C618C1837A00FA0BCB /* NSCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CA04C918C1837A00FA0BCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07CA04CB18C1837A00FA0BCB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				07CA04DB18C1837A00FA0BCB /* Main.storyboard */,
 				07CA04DE18C1837A00FA0BCB /* ViewController.h */,
 				07CA04DF18C1837A00FA0BCB /* ViewController.m */,
+				07B8C02318C6553600196B91 /* TurnEngine.h */,
+				07B8C02418C6553600196B91 /* TurnEngine.m */,
 				07CA04E118C1837A00FA0BCB /* Images.xcassets */,
 				07CA04D018C1837A00FA0BCB /* Supporting Files */,
 			);
@@ -255,6 +260,7 @@
 			files = (
 				07CA04E018C1837A00FA0BCB /* ViewController.m in Sources */,
 				07CA04DA18C1837A00FA0BCB /* AppDelegate.m in Sources */,
+				07B8C02518C6553600196B91 /* TurnEngine.m in Sources */,
 				07CA04D618C1837A00FA0BCB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
