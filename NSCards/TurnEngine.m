@@ -10,6 +10,10 @@
 
 @implementation TurnEngine
 
+-(void)setUpBoard
+{
+}
+
 +(TurnEngine *)sharedEngine
 {
 	static dispatch_once_t pred;

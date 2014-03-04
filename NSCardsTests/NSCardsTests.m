@@ -25,4 +25,19 @@
     [super tearDown];
 }
 
+-(void)testGameStart
+{
+	TurnEngine *gameEngine = [TurnEngine sharedEngine];
+	[gameEngine setUpBoard];
+	
+	XCTAssertNotNil(gameEngine.devicePlayer);
+	XCTAssertNotNil(gameEngine.opponent);
+	XCTAssertNotNil(gameEngine.currentPlayer);
+	
+	XCTAssertTrue(gameEngine.devicePlayer.isWhitePlayer);
+	XCTAssertTrue(gameEngine.devicePlayer.isBlackPlayer);
+	
+	XCTAssertNotEqualObjects(gameEngine.devicePlayer.displayName, gameEngine.opponent.displayName);
+}
+
 @end

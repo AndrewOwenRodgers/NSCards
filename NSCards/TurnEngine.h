@@ -11,5 +11,6 @@
 @interface TurnEngine : NSObject
 
 +(TurnEngine *)sharedEngine;
+-(void)setUpBoard;
 
 @end

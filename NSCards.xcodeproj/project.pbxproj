@@ -15,7 +15,6 @@
 		07CA04D418C1837A00FA0BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CA04D218C1837A00FA0BCB /* InfoPlist.strings */; };
 		07CA04D618C1837A00FA0BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA04D518C1837A00FA0BCB /* main.m */; };
 		07CA04DA18C1837A00FA0BCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA04D918C1837A00FA0BCB /* AppDelegate.m */; };
-		07CA04DD18C1837A00FA0BCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CA04DB18C1837A00FA0BCB /* Main.storyboard */; };
 		07CA04E018C1837A00FA0BCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA04DF18C1837A00FA0BCB /* ViewController.m */; };
 		07CA04E218C1837A00FA0BCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07CA04E118C1837A00FA0BCB /* Images.xcassets */; };
 		07CA04E918C1837A00FA0BCB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04E818C1837A00FA0BCB /* XCTest.framework */; };
@@ -49,7 +48,6 @@
 		07CA04D718C1837A00FA0BCB /* NSCards-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCards-Prefix.pch"; sourceTree = "<group>"; };
 		07CA04D818C1837A00FA0BCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07CA04D918C1837A00FA0BCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		07CA04DC18C1837A00FA0BCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07CA04DE18C1837A00FA0BCB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		07CA04DF18C1837A00FA0BCB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		07CA04E118C1837A00FA0BCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -84,6 +82,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07111A3E18C6693F005590D1 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		07CA04BD18C1837A00FA0BCB = {
 			isa = PBXGroup;
 			children = (
@@ -117,9 +122,9 @@
 		07CA04CF18C1837A00FA0BCB /* NSCards */ = {
 			isa = PBXGroup;
 			children = (
+				07111A3E18C6693F005590D1 /* iPad */,
 				07CA04D818C1837A00FA0BCB /* AppDelegate.h */,
 				07CA04D918C1837A00FA0BCB /* AppDelegate.m */,
-				07CA04DB18C1837A00FA0BCB /* Main.storyboard */,
 				07CA04DE18C1837A00FA0BCB /* ViewController.h */,
 				07CA04DF18C1837A00FA0BCB /* ViewController.m */,
 				07B8C02318C6553600196B91 /* TurnEngine.h */,
@@ -238,7 +243,6 @@
 			files = (
 				07CA04E218C1837A00FA0BCB /* Images.xcassets in Resources */,
 				07CA04D418C1837A00FA0BCB /* InfoPlist.strings in Resources */,
-				07CA04DD18C1837A00FA0BCB /* Main.storyboard in Resources */,
 				0763B5C218C653BE007F783C /* Rules and Card Lists.pages in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,14 +294,6 @@
 				07CA04D318C1837A00FA0BCB /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		07CA04DB18C1837A00FA0BCB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07CA04DC18C1837A00FA0BCB /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		07CA04F118C1837A00FA0BCB /* InfoPlist.strings */ = {
@@ -391,7 +387,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSCards/NSCards-Prefix.pch";
 				INFOPLIST_FILE = "NSCards/NSCards-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -404,7 +402,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSCards/NSCards-Prefix.pch";
 				INFOPLIST_FILE = "NSCards/NSCards-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
