@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071D26F818C5BD8900020264 /* Rules and Card Lists.pages in Resources */ = {isa = PBXBuildFile; fileRef = 071D26F718C5BD8900020264 /* Rules and Card Lists.pages */; };
 		07CA04CA18C1837A00FA0BCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04C918C1837A00FA0BCB /* Foundation.framework */; };
 		07CA04CC18C1837A00FA0BCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04CB18C1837A00FA0BCB /* CoreGraphics.framework */; };
 		07CA04CE18C1837A00FA0BCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04CD18C1837A00FA0BCB /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071D26F718C5BD8900020264 /* Rules and Card Lists.pages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Rules and Card Lists.pages"; sourceTree = "<group>"; };
 		07CA04C618C1837A00FA0BCB /* NSCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CA04C918C1837A00FA0BCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07CA04CB18C1837A00FA0BCB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +128,7 @@
 		07CA04D018C1837A00FA0BCB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				071D26F718C5BD8900020264 /* Rules and Card Lists.pages */,
 				07CA04D118C1837A00FA0BCB /* NSCards-Info.plist */,
 				07CA04D218C1837A00FA0BCB /* InfoPlist.strings */,
 				07CA04D518C1837A00FA0BCB /* main.m */,
@@ -231,6 +234,7 @@
 				07CA04E218C1837A00FA0BCB /* Images.xcassets in Resources */,
 				07CA04D418C1837A00FA0BCB /* InfoPlist.strings in Resources */,
 				07CA04DD18C1837A00FA0BCB /* Main.storyboard in Resources */,
+				071D26F818C5BD8900020264 /* Rules and Card Lists.pages in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +464,7 @@
 				07CA04FA18C1837A00FA0BCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07CA04FB18C1837A00FA0BCB /* Build configuration list for PBXNativeTarget "NSCardsTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +473,7 @@
 				07CA04FD18C1837A00FA0BCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
