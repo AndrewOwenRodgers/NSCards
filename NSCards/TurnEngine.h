@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSPlayer.h"
 
 @interface TurnEngine : NSObject
+
+@property (strong, nonatomic) NSPlayer *devicePlayer;
+@property (strong, nonatomic) NSPlayer *opponent;
 
 +(TurnEngine *)sharedEngine;
 -(void)setUpBoard;

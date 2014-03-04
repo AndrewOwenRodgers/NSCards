@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07111A4118C6971F005590D1 /* NSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07111A4018C6971F005590D1 /* NSPlayer.m */; };
+		07111A4418C69A65005590D1 /* NSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 07111A4318C69A65005590D1 /* NSCard.m */; };
 		0763B5C218C653BE007F783C /* Rules and Card Lists.pages in Resources */ = {isa = PBXBuildFile; fileRef = 0763B5C118C653BE007F783C /* Rules and Card Lists.pages */; };
 		07B8C02518C6553600196B91 /* TurnEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8C02418C6553600196B91 /* TurnEngine.m */; };
 		07CA04CA18C1837A00FA0BCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04C918C1837A00FA0BCB /* Foundation.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07111A3F18C6971F005590D1 /* NSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPlayer.h; sourceTree = "<group>"; };
+		07111A4018C6971F005590D1 /* NSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPlayer.m; sourceTree = "<group>"; };
+		07111A4218C69A65005590D1 /* NSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCard.h; sourceTree = "<group>"; };
+		07111A4318C69A65005590D1 /* NSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCard.m; sourceTree = "<group>"; };
 		0763B5C118C653BE007F783C /* Rules and Card Lists.pages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Rules and Card Lists.pages"; sourceTree = "<group>"; };
 		07B8C02318C6553600196B91 /* TurnEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnEngine.h; sourceTree = "<group>"; };
 		07B8C02418C6553600196B91 /* TurnEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnEngine.m; sourceTree = "<group>"; };
@@ -129,6 +135,10 @@
 				07CA04DF18C1837A00FA0BCB /* ViewController.m */,
 				07B8C02318C6553600196B91 /* TurnEngine.h */,
 				07B8C02418C6553600196B91 /* TurnEngine.m */,
+				07111A3F18C6971F005590D1 /* NSPlayer.h */,
+				07111A4018C6971F005590D1 /* NSPlayer.m */,
+				07111A4218C69A65005590D1 /* NSCard.h */,
+				07111A4318C69A65005590D1 /* NSCard.m */,
 				07CA04E118C1837A00FA0BCB /* Images.xcassets */,
 				07CA04D018C1837A00FA0BCB /* Supporting Files */,
 			);
@@ -262,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07111A4118C6971F005590D1 /* NSPlayer.m in Sources */,
 				07CA04E018C1837A00FA0BCB /* ViewController.m in Sources */,
 				07CA04DA18C1837A00FA0BCB /* AppDelegate.m in Sources */,
 				07B8C02518C6553600196B91 /* TurnEngine.m in Sources */,
+				07111A4418C69A65005590D1 /* NSCard.m in Sources */,
 				07CA04D618C1837A00FA0BCB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
