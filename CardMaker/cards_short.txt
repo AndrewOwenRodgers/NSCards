@@ -1,0 +1,55 @@
+BLACK
+CLASS NSObject
+
+BLACK
+CLASS NSOperationQueue
+
+BLACK
+CLASS NSArray
+
+BLACK
+CLASS NSMutableArray
+
+BLACK
+CLASS NSString
+
+BLACK
+CLASS Fast Enumeration
+for (id object in __________) {
+    [method call];
+}
+
+BLACK
+CLASS If Statement
+if (__________) {
+    [method call];
+}
+
+WHITE
+CLASS NSObject
+
+WHITE
+CLASS NSOperationQueue
+
+WHITE
+CLASS NSArray
+- initWithObjects:
+costs (1) per object
+
+WHITE
+CLASS NSMutableArray
+
+WHITE
+CLASS NSString
+
+WHITE
+CLASS Fast Enumeration
+for (id object in __________) {
+    [method call];
+}
+
+WHITE
+CLASS If Statement
+if (__________) {
+    [method call];
+}
