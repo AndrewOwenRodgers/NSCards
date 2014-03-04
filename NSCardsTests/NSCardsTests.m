@@ -28,7 +28,8 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSString *doNothingTest = @"This Test Does Nothing";
+    XCTAssertNotNil(doNothingTest, @"Foundation is broken, duck and cover!");
 }
 
 @end
