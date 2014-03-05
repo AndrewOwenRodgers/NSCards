@@ -11,6 +11,7 @@
 		070BA98F18C6A60600784D5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070BA98E18C6A60600784D5D /* Main.storyboard */; };
 		07111A4118C6971F005590D1 /* NSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07111A4018C6971F005590D1 /* NSPlayer.m */; };
 		07111A4418C69A65005590D1 /* NSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 07111A4318C69A65005590D1 /* NSCard.m */; };
+		072C22AA18C7D85000424EDD /* NSPlayerOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C22A918C7D85000424EDD /* NSPlayerOperationQueue.m */; };
 		0763B5C218C653BE007F783C /* Rules and Card Lists.pages in Resources */ = {isa = PBXBuildFile; fileRef = 0763B5C118C653BE007F783C /* Rules and Card Lists.pages */; };
 		07B8C02518C6553600196B91 /* TurnEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8C02418C6553600196B91 /* TurnEngine.m */; };
 		07CA04CA18C1837A00FA0BCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04C918C1837A00FA0BCB /* Foundation.framework */; };
@@ -46,6 +47,8 @@
 		07111A4018C6971F005590D1 /* NSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPlayer.m; sourceTree = "<group>"; };
 		07111A4218C69A65005590D1 /* NSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCard.h; sourceTree = "<group>"; };
 		07111A4318C69A65005590D1 /* NSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCard.m; sourceTree = "<group>"; };
+		072C22A818C7D85000424EDD /* NSPlayerOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPlayerOperationQueue.h; sourceTree = "<group>"; };
+		072C22A918C7D85000424EDD /* NSPlayerOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPlayerOperationQueue.m; sourceTree = "<group>"; };
 		0763B5C118C653BE007F783C /* Rules and Card Lists.pages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Rules and Card Lists.pages"; sourceTree = "<group>"; };
 		07B8C02318C6553600196B91 /* TurnEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnEngine.h; sourceTree = "<group>"; };
 		07B8C02418C6553600196B91 /* TurnEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnEngine.m; sourceTree = "<group>"; };
@@ -141,10 +144,12 @@
 				070BA98E18C6A60600784D5D /* Main.storyboard */,
 				07B8C02318C6553600196B91 /* TurnEngine.h */,
 				07B8C02418C6553600196B91 /* TurnEngine.m */,
-				07111A3F18C6971F005590D1 /* NSPlayer.h */,
-				07111A4018C6971F005590D1 /* NSPlayer.m */,
 				070BA98B18C69FF700784D5D /* NSBoard.h */,
 				070BA98C18C69FF700784D5D /* NSBoard.m */,
+				07111A3F18C6971F005590D1 /* NSPlayer.h */,
+				07111A4018C6971F005590D1 /* NSPlayer.m */,
+				072C22A818C7D85000424EDD /* NSPlayerOperationQueue.h */,
+				072C22A918C7D85000424EDD /* NSPlayerOperationQueue.m */,
 				07111A4218C69A65005590D1 /* NSCard.h */,
 				07111A4318C69A65005590D1 /* NSCard.m */,
 				07CA04E118C1837A00FA0BCB /* Images.xcassets */,
@@ -288,6 +293,7 @@
 				07111A4418C69A65005590D1 /* NSCard.m in Sources */,
 				07CA04D618C1837A00FA0BCB /* main.m in Sources */,
 				070BA98D18C69FF700784D5D /* NSBoard.m in Sources */,
+				072C22AA18C7D85000424EDD /* NSPlayerOperationQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +417,7 @@
 				INFOPLIST_FILE = "NSCards/NSCards-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -426,7 +432,7 @@
 				INFOPLIST_FILE = "NSCards/NSCards-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

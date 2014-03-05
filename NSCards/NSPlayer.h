@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class TurnEngine;
+
 @interface NSPlayer : NSObject
+
+@property (weak, nonatomic) TurnEngine *gameEngine;
 
 @property (nonatomic) BOOL isWhitePlayer;
 @property (strong, nonatomic) NSString *displayName;

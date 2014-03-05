@@ -8,6 +8,7 @@
 
 #import "NSPlayer.h"
 #import "NSCard.h"
+#import "TurnEngine.h"
 
 @implementation NSPlayer
 

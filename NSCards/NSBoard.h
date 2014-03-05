@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSPlayer.h"
+#import "NSPlayerOperationQueue.h"
+
+@class TurnEngine;
 
 @interface NSBoard : NSObject
 
 @property (strong, nonatomic) NSMutableArray *objectsOnBoard;
 @property (strong, nonatomic) NSMutableArray *p1Threads;
 @property (strong, nonatomic) NSMutableArray *p2Threads;
+@property (weak, nonatomic) TurnEngine *gameEngine;
+
+-(NSMutableArray *)addThreadToPlayerThreadArray:(NSMutableArray *)threads;
 
 @end
