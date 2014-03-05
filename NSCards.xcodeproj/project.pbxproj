@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070BA98D18C69FF700784D5D /* NSBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BA98C18C69FF700784D5D /* NSBoard.m */; };
+		070BA98F18C6A60600784D5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070BA98E18C6A60600784D5D /* Main.storyboard */; };
 		07111A4118C6971F005590D1 /* NSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07111A4018C6971F005590D1 /* NSPlayer.m */; };
 		07111A4418C69A65005590D1 /* NSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 07111A4318C69A65005590D1 /* NSCard.m */; };
 		0763B5C218C653BE007F783C /* Rules and Card Lists.pages in Resources */ = {isa = PBXBuildFile; fileRef = 0763B5C118C653BE007F783C /* Rules and Card Lists.pages */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		070BA98B18C69FF700784D5D /* NSBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBoard.h; sourceTree = "<group>"; };
 		070BA98C18C69FF700784D5D /* NSBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBoard.m; sourceTree = "<group>"; };
+		070BA98E18C6A60600784D5D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		07111A3F18C6971F005590D1 /* NSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPlayer.h; sourceTree = "<group>"; };
 		07111A4018C6971F005590D1 /* NSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPlayer.m; sourceTree = "<group>"; };
 		07111A4218C69A65005590D1 /* NSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCard.h; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				07CA04D918C1837A00FA0BCB /* AppDelegate.m */,
 				07CA04DE18C1837A00FA0BCB /* ViewController.h */,
 				07CA04DF18C1837A00FA0BCB /* ViewController.m */,
+				070BA98E18C6A60600784D5D /* Main.storyboard */,
 				07B8C02318C6553600196B91 /* TurnEngine.h */,
 				07B8C02418C6553600196B91 /* TurnEngine.m */,
 				07111A3F18C6971F005590D1 /* NSPlayer.h */,
@@ -259,6 +262,7 @@
 				07CA04E218C1837A00FA0BCB /* Images.xcassets in Resources */,
 				07CA04D418C1837A00FA0BCB /* InfoPlist.strings in Resources */,
 				0763B5C218C653BE007F783C /* Rules and Card Lists.pages in Resources */,
+				070BA98F18C6A60600784D5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
