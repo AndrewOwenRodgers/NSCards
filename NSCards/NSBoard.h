@@ -11,5 +11,7 @@
 @interface NSBoard : NSObject
 
 @property (strong, nonatomic) NSMutableArray *objectsOnBoard;
+@property (strong, nonatomic) NSMutableArray *p1Threads;
+@property (strong, nonatomic) NSMutableArray *p2Threads;
 
 @end

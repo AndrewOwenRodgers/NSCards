@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) NSMutableArray *cardsInHand;
 @property (strong, nonatomic) NSMutableArray *deck;
+@property (weak, nonatomic) NSMutableArray *threads;
 
 -(id)initWithColor:(BOOL)color;
 -(void)drawCard;
