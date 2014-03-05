@@ -17,6 +17,7 @@
 	{
 		self.p1Threads = [[NSMutableArray alloc] init];
 		self.p2Threads = [[NSMutableArray alloc] init];
+		self.cardsInPlay = [[NSMutableArray alloc] init];
 	}
 	
 	return self;

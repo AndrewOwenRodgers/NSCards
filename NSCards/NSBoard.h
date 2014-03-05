@@ -14,7 +14,7 @@
 
 @interface NSBoard : NSObject
 
-@property (strong, nonatomic) NSMutableArray *objectsOnBoard;
+@property (strong, nonatomic) NSMutableArray *cardsInPlay;
 @property (strong, nonatomic) NSMutableArray *p1Threads;
 @property (strong, nonatomic) NSMutableArray *p2Threads;
 @property (weak, nonatomic) TurnEngine *gameEngine;

@@ -20,6 +20,8 @@
 	self.opponent.isWhitePlayer = FALSE;
 	self.devicePlayer.displayName = @"Player";
 	self.opponent.displayName = @"Opponent";
+	self.devicePlayer.canTouchBoard = TRUE;
+	self.opponent.canTouchBoard = FALSE;
 	
 	for (int i = 0; i < 2; i++)
 	{
@@ -36,6 +38,20 @@
 	for (int i = 0; i < 5; i++)
 	{
 		[self.devicePlayer drawCard];
+	}
+}
+
+-(void)endTurn
+{
+	if (self.devicePlayer.canTouchBoard)
+	{
+		self.devicePlayer.canTouchBoard = FALSE;
+		self.opponent.canTouchBoard = TRUE;
+	}
+	else
+	{
+		self.devicePlayer.canTouchBoard = TRUE;
+		self.opponent.canTouchBoard = FALSE;
 	}
 }
 

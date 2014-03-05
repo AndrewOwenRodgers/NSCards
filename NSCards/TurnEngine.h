@@ -18,5 +18,6 @@
 
 +(TurnEngine *)sharedEngine;
 -(void)setUpBoard;
+-(void)endTurn;
 
 @end

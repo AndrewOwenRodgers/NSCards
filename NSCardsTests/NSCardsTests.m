@@ -46,6 +46,16 @@
 	XCTAssert(gameEngine.opponent.threads.count == 2);
 }
 
-
+-(void)testChangeTurns
+{
+	TurnEngine *gameEngine = [TurnEngine sharedEngine];
+	[gameEngine setUpBoard];
+	
+	BOOL couldTouchBoard = gameEngine.devicePlayer.canTouchBoard;
+	[gameEngine endTurn];
+	
+	XCTAssert(gameEngine.devicePlayer.canTouchBoard != couldTouchBoard);
+	XCTAssert(gameEngine.devicePlayer.canTouchBoard != gameEngine.opponent.canTouchBoard);
+}
 
 @end

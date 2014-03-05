@@ -13,6 +13,7 @@
 @interface NSPlayer : NSObject
 
 @property (weak, nonatomic) TurnEngine *gameEngine;
+@property (nonatomic) BOOL canTouchBoard;
 
 @property (nonatomic) BOOL isWhitePlayer;
 @property (strong, nonatomic) NSString *displayName;
