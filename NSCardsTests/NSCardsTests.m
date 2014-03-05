@@ -33,8 +33,7 @@
 	XCTAssertNotNil(gameEngine.devicePlayer);
 	XCTAssertNotNil(gameEngine.opponent);
 	
-	XCTAssertTrue(gameEngine.devicePlayer.isWhitePlayer);
-	XCTAssertTrue(!gameEngine.opponent.isWhitePlayer);
+	XCTAssertNotEqual(gameEngine.devicePlayer.isWhitePlayer, gameEngine.opponent.isWhitePlayer);
 
 	XCTAssertTrue(gameEngine.devicePlayer.cardsInHand.count == 5);
 	XCTAssertTrue(gameEngine.devicePlayer.deck.count == 25);

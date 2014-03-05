@@ -10,9 +10,13 @@
 
 @interface NSPlayer : NSObject
 
-@property (strong, nonatomic) NSArray *cardsInHand;
-@property (strong, nonatomic) NSArray *deck;
 @property (nonatomic) BOOL isWhitePlayer;
 @property (strong, nonatomic) NSString *displayName;
+
+@property (strong, nonatomic) NSMutableArray *cardsInHand;
+@property (strong, nonatomic) NSMutableArray *deck;
+
+-(id)initWithColor:(BOOL)color;
+-(void)drawCard;
 
 @end

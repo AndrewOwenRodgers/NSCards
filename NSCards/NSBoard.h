@@ -1,5 +1,5 @@
 //
-//  NSCard.h
+//  NSBoard.h
 //  NSCards
 //
 //  Created by Andrew Rodgers on 3/4/14.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSCard : NSObject
+@interface NSBoard : NSObject
 
-@property (nonatomic) BOOL isWhiteCard;
+@property (strong, nonatomic) NSMutableArray *objectsOnBoard;
 
 @end

@@ -12,6 +12,18 @@
 
 -(void)setUpBoard
 {
+	self.devicePlayer = [[NSPlayer alloc] initWithColor:TRUE];
+	self.opponent = [[NSPlayer alloc] initWithColor:FALSE];
+	
+	self.devicePlayer.isWhitePlayer = TRUE;
+	self.opponent.isWhitePlayer = FALSE;
+	self.devicePlayer.displayName = @"Player";
+	self.opponent.displayName = @"Opponent";
+	
+	for (int i = 0; i < 5; i++)
+	{
+		[self.devicePlayer drawCard];
+	}
 }
 
 +(TurnEngine *)sharedEngine
