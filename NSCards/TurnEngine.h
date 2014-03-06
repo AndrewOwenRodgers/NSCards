@@ -15,6 +15,8 @@
 @property (strong, nonatomic) NSPlayer *devicePlayer;
 @property (strong, nonatomic) NSPlayer *opponent;
 @property (strong, nonatomic) NSBoard *board;
+@property (nonatomic) BOOL gameFinished;
+@property (nonatomic) BOOL whitePlayerWon;
 
 +(TurnEngine *)sharedEngine;
 -(void)setUpBoard;

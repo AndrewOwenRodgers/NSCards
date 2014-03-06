@@ -20,8 +20,11 @@
 @property (weak, nonatomic) TurnEngine *gameEngine;
 @property (strong, nonatomic) NSMutableArray *whitePlayerDiscardPile;
 @property (strong, nonatomic) NSMutableArray *blackPlayerDiscardPile;
+@property (strong, nonatomic) NSMutableArray *cardsSavedToFiles;
 
 -(NSMutableArray *)addThreadToPlayerThreadArray:(NSMutableArray *)threads;
 -(void)checkForDiscards;
+-(void)performPlayerMethods;
+-(void)resetPlayerQueue;
 
 @end

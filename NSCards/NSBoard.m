@@ -53,12 +53,37 @@
 {
 	if ((self.gameEngine.devicePlayer.canTouchBoard && self.gameEngine.devicePlayer.isWhitePlayer) || (self.gameEngine.opponent.canTouchBoard && self.gameEngine.opponent.isWhitePlayer))
 	{
-		
+		for (NSPlayerOperationQueue *queue in self.whitePlayerThreads)
+		{
+			if (queue.isDoingStuff)
+			{
+				queue.iterationsPerformed += queue.numberOfSequentialQueues;
+				if (queue.iterationsPerformed >= queue.masterIterations)
+				{
+					[[self.cardsInPlay objectAtIndex:queue.indexOfCard] performMethod];
+				}
+			}
+		}
 	}
 	else
 	{
-		
+		for (NSPlayerOperationQueue *queue in self.blackPlayerThreads)
+		{
+			if (queue.isDoingStuff)
+			{
+				queue.iterationsPerformed += queue.numberOfSequentialQueues;
+				if (queue.iterationsPerformed >= queue.masterIterations)
+				{
+					[[self.cardsInPlay objectAtIndex:queue.indexOfCard] performMethod];
+				}
+			}
+		}
 	}
+}
+
+-(void)resetPlayerQueue
+{
+	
 }
 
 @end
