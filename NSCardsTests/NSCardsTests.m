@@ -40,8 +40,8 @@
 	
 	XCTAssertNotEqualObjects(gameEngine.devicePlayer.displayName, gameEngine.opponent.displayName);
 	
-	XCTAssert(gameEngine.board.p1Threads.count == 2);
-	XCTAssert(gameEngine.board.p2Threads.count == 2);
+	XCTAssert(gameEngine.board.whitePlayerThreads.count == 2);
+	XCTAssert(gameEngine.board.blackPlayerThreads.count == 2);
 	XCTAssert(gameEngine.devicePlayer.threads.count == 2);
 	XCTAssert(gameEngine.opponent.threads.count == 2);
 }

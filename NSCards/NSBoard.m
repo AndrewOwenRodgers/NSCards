@@ -8,6 +8,7 @@
 
 #import "NSBoard.h"
 #import "TurnEngine.h"
+#import "NSCard.h"
 
 @implementation NSBoard
 
@@ -15,8 +16,8 @@
 {
 	if (self = [super init])
 	{
-		self.p1Threads = [[NSMutableArray alloc] init];
-		self.p2Threads = [[NSMutableArray alloc] init];
+		self.whitePlayerThreads = [[NSMutableArray alloc] init];
+		self.blackPlayerThreads = [[NSMutableArray alloc] init];
 		self.cardsInPlay = [[NSMutableArray alloc] init];
 	}
 	
@@ -27,6 +28,37 @@
 {
 	[threads addObject:[[NSPlayerOperationQueue alloc] init]];
 	return threads;
+}
+
+-(void)checkForDiscards
+{
+	for (NSCard *card in self.cardsInPlay)
+	{
+		if (card.retain_Count < 1)
+		{
+			[self.cardsInPlay removeObject:card];
+			if (card.isWhiteCard)
+			{
+				[self.whitePlayerDiscardPile addObject:card];
+			}
+			else
+			{
+				[self.blackPlayerDiscardPile addObject:card];
+			}
+		}
+	}
+}
+
+-(void)performPlayerMethods
+{
+	if ((self.gameEngine.devicePlayer.canTouchBoard && self.gameEngine.devicePlayer.isWhitePlayer) || (self.gameEngine.opponent.canTouchBoard && self.gameEngine.opponent.isWhitePlayer))
+	{
+		
+	}
+	else
+	{
+		
+	}
 }
 
 @end
