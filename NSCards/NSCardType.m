@@ -2,7 +2,7 @@
 //  NSCardType.m
 //  NSCards
 //
-//  Created by Nicholas Barnard on 3/5/14.
+//  Created by Nicholas Barnard on 3/6/14.
 //  Copyright (c) 2014 Andrew Rodgers. All rights reserved.
 //
 
@@ -12,10 +12,10 @@
 
 @implementation NSCardType
 
-@dynamic cardType;
-@dynamic cardDescription;
-@dynamic cardClassName;
 @dynamic cardClassInheritsFrom;
+@dynamic cardClassName;
+@dynamic cardDescription;
+@dynamic cardType;
 @dynamic cardInstances;
 
 @end

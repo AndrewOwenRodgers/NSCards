@@ -2,7 +2,7 @@
 //  NSCard.h
 //  NSCards
 //
-//  Created by Nicholas Barnard on 3/5/14.
+//  Created by Nicholas Barnard on 3/6/14.
 //  Copyright (c) 2014 Andrew Rodgers. All rights reserved.
 //
 
@@ -11,17 +11,12 @@
 
 @class NSCardType;
 
-typedef enum cardLocation {
-    stack = 0,
-    discard = 1,
-    hand = 2,
-    playfield =3
-} cardLocation;
-
 @interface NSCard : NSManagedObject
 
-@property (nonatomic) cardLocation location;
 @property (nonatomic) BOOL isWhiteCard;
+@property (nonatomic) int cycleCount;
+@property (nonatomic) int retain_Count;
+@property (nonatomic, retain) NSDictionary *cardRelationships;
 @property (nonatomic, retain) NSCardType *cardTemplate;
 
 @end

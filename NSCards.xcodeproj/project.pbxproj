@@ -26,9 +26,9 @@
 		07CA04EB18C1837A00FA0BCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04CD18C1837A00FA0BCB /* UIKit.framework */; };
 		07CA04F318C1837A00FA0BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CA04F118C1837A00FA0BCB /* InfoPlist.strings */; };
 		07CA04F518C1837A00FA0BCB /* NSCardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA04F418C1837A00FA0BCB /* NSCardsTests.m */; };
+		111B48E718C9031700901F36 /* NSCardType.m in Sources */ = {isa = PBXBuildFile; fileRef = 111B48E618C9031700901F36 /* NSCardType.m */; };
+		111B48EA18C9031800901F36 /* NSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 111B48E918C9031800901F36 /* NSCard.m */; };
 		11BD21E918C8405A004062F3 /* Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BD21E718C8405A004062F3 /* Card.xcdatamodeld */; };
-		11BD21FF18C84941004062F3 /* NSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD21FE18C84941004062F3 /* NSCard.m */; };
-		11BD220218C84941004062F3 /* NSCardType.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BD220118C84941004062F3 /* NSCardType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,11 +70,11 @@
 		07CA04F018C1837A00FA0BCB /* NSCardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSCardsTests-Info.plist"; sourceTree = "<group>"; };
 		07CA04F218C1837A00FA0BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07CA04F418C1837A00FA0BCB /* NSCardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCardsTests.m; sourceTree = "<group>"; };
+		111B48E518C9031700901F36 /* NSCardType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCardType.h; sourceTree = "<group>"; };
+		111B48E618C9031700901F36 /* NSCardType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCardType.m; sourceTree = "<group>"; };
+		111B48E818C9031800901F36 /* NSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCard.h; sourceTree = "<group>"; };
+		111B48E918C9031800901F36 /* NSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCard.m; sourceTree = "<group>"; };
 		11BD21E818C8405A004062F3 /* Card.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Card.xcdatamodel; sourceTree = "<group>"; };
-		11BD21FD18C84941004062F3 /* NSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCard.h; sourceTree = "<group>"; };
-		11BD21FE18C84941004062F3 /* NSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCard.m; sourceTree = "<group>"; };
-		11BD220018C84941004062F3 /* NSCardType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCardType.h; sourceTree = "<group>"; };
-		11BD220118C84941004062F3 /* NSCardType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCardType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,11 +195,11 @@
 		11BD21FC18C8466B004062F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				111B48E818C9031800901F36 /* NSCard.h */,
+				111B48E918C9031800901F36 /* NSCard.m */,
+				111B48E518C9031700901F36 /* NSCardType.h */,
+				111B48E618C9031700901F36 /* NSCardType.m */,
 				11BD21E718C8405A004062F3 /* Card.xcdatamodeld */,
-				11BD220018C84941004062F3 /* NSCardType.h */,
-				11BD220118C84941004062F3 /* NSCardType.m */,
-				11BD21FD18C84941004062F3 /* NSCard.h */,
-				11BD21FE18C84941004062F3 /* NSCard.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -302,15 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111B48EA18C9031800901F36 /* NSCard.m in Sources */,
 				07111A4118C6971F005590D1 /* NSPlayer.m in Sources */,
-				11BD21FF18C84941004062F3 /* NSCard.m in Sources */,
 				07CA04E018C1837A00FA0BCB /* ViewController.m in Sources */,
 				07CA04DA18C1837A00FA0BCB /* AppDelegate.m in Sources */,
 				11BD21E918C8405A004062F3 /* Card.xcdatamodeld in Sources */,
 				07B8C02518C6553600196B91 /* TurnEngine.m in Sources */,
 				07CA04D618C1837A00FA0BCB /* main.m in Sources */,
 				070BA98D18C69FF700784D5D /* NSBoard.m in Sources */,
-				11BD220218C84941004062F3 /* NSCardType.m in Sources */,
+				111B48E718C9031700901F36 /* NSCardType.m in Sources */,
 				072C22AA18C7D85000424EDD /* NSPlayerOperationQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
