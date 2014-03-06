@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameBoardViewController : UICollectionViewController
+@interface GameBoardViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @end
