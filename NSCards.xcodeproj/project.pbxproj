@@ -10,7 +10,6 @@
 		070BA98D18C69FF700784D5D /* NSBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 070BA98C18C69FF700784D5D /* NSBoard.m */; };
 		070BA98F18C6A60600784D5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070BA98E18C6A60600784D5D /* Main.storyboard */; };
 		07111A4118C6971F005590D1 /* NSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07111A4018C6971F005590D1 /* NSPlayer.m */; };
-		07111A4418C69A65005590D1 /* NSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 07111A4318C69A65005590D1 /* NSCard.m */; };
 		072C22AA18C7D85000424EDD /* NSPlayerOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 072C22A918C7D85000424EDD /* NSPlayerOperationQueue.m */; };
 		0763B5C218C653BE007F783C /* Rules and Card Lists.pages in Resources */ = {isa = PBXBuildFile; fileRef = 0763B5C118C653BE007F783C /* Rules and Card Lists.pages */; };
 		07B8C02518C6553600196B91 /* TurnEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B8C02418C6553600196B91 /* TurnEngine.m */; };
@@ -27,6 +26,9 @@
 		07CA04EB18C1837A00FA0BCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04CD18C1837A00FA0BCB /* UIKit.framework */; };
 		07CA04F318C1837A00FA0BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CA04F118C1837A00FA0BCB /* InfoPlist.strings */; };
 		07CA04F518C1837A00FA0BCB /* NSCardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA04F418C1837A00FA0BCB /* NSCardsTests.m */; };
+		111B48E718C9031700901F36 /* NSCardType.m in Sources */ = {isa = PBXBuildFile; fileRef = 111B48E618C9031700901F36 /* NSCardType.m */; };
+		111B48EA18C9031800901F36 /* NSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 111B48E918C9031800901F36 /* NSCard.m */; };
+		11BD21E918C8405A004062F3 /* Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BD21E718C8405A004062F3 /* Card.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +47,6 @@
 		070BA98E18C6A60600784D5D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		07111A3F18C6971F005590D1 /* NSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPlayer.h; sourceTree = "<group>"; };
 		07111A4018C6971F005590D1 /* NSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPlayer.m; sourceTree = "<group>"; };
-		07111A4218C69A65005590D1 /* NSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCard.h; sourceTree = "<group>"; };
-		07111A4318C69A65005590D1 /* NSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCard.m; sourceTree = "<group>"; };
 		072C22A818C7D85000424EDD /* NSPlayerOperationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPlayerOperationQueue.h; sourceTree = "<group>"; };
 		072C22A918C7D85000424EDD /* NSPlayerOperationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPlayerOperationQueue.m; sourceTree = "<group>"; };
 		0763B5C118C653BE007F783C /* Rules and Card Lists.pages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Rules and Card Lists.pages"; sourceTree = "<group>"; };
@@ -70,6 +70,11 @@
 		07CA04F018C1837A00FA0BCB /* NSCardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSCardsTests-Info.plist"; sourceTree = "<group>"; };
 		07CA04F218C1837A00FA0BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07CA04F418C1837A00FA0BCB /* NSCardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCardsTests.m; sourceTree = "<group>"; };
+		111B48E518C9031700901F36 /* NSCardType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCardType.h; sourceTree = "<group>"; };
+		111B48E618C9031700901F36 /* NSCardType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCardType.m; sourceTree = "<group>"; };
+		111B48E818C9031800901F36 /* NSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCard.h; sourceTree = "<group>"; };
+		111B48E918C9031800901F36 /* NSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCard.m; sourceTree = "<group>"; };
+		11BD21E818C8405A004062F3 /* Card.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Card.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,7 @@
 		07CA04CF18C1837A00FA0BCB /* NSCards */ = {
 			isa = PBXGroup;
 			children = (
+				11BD21FC18C8466B004062F3 /* Model */,
 				07111A3E18C6693F005590D1 /* iPad */,
 				07CA04D818C1837A00FA0BCB /* AppDelegate.h */,
 				07CA04D918C1837A00FA0BCB /* AppDelegate.m */,
@@ -150,8 +156,6 @@
 				07111A4018C6971F005590D1 /* NSPlayer.m */,
 				072C22A818C7D85000424EDD /* NSPlayerOperationQueue.h */,
 				072C22A918C7D85000424EDD /* NSPlayerOperationQueue.m */,
-				07111A4218C69A65005590D1 /* NSCard.h */,
-				07111A4318C69A65005590D1 /* NSCard.m */,
 				07CA04E118C1837A00FA0BCB /* Images.xcassets */,
 				07CA04D018C1837A00FA0BCB /* Supporting Files */,
 			);
@@ -186,6 +190,18 @@
 				07CA04F118C1837A00FA0BCB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11BD21FC18C8466B004062F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				111B48E818C9031800901F36 /* NSCard.h */,
+				111B48E918C9031800901F36 /* NSCard.m */,
+				111B48E518C9031700901F36 /* NSCardType.h */,
+				111B48E618C9031700901F36 /* NSCardType.m */,
+				11BD21E718C8405A004062F3 /* Card.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,13 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111B48EA18C9031800901F36 /* NSCard.m in Sources */,
 				07111A4118C6971F005590D1 /* NSPlayer.m in Sources */,
 				07CA04E018C1837A00FA0BCB /* ViewController.m in Sources */,
 				07CA04DA18C1837A00FA0BCB /* AppDelegate.m in Sources */,
+				11BD21E918C8405A004062F3 /* Card.xcdatamodeld in Sources */,
 				07B8C02518C6553600196B91 /* TurnEngine.m in Sources */,
-				07111A4418C69A65005590D1 /* NSCard.m in Sources */,
 				07CA04D618C1837A00FA0BCB /* main.m in Sources */,
 				070BA98D18C69FF700784D5D /* NSBoard.m in Sources */,
+				111B48E718C9031700901F36 /* NSCardType.m in Sources */,
 				072C22AA18C7D85000424EDD /* NSPlayerOperationQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +528,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11BD21E718C8405A004062F3 /* Card.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11BD21E818C8405A004062F3 /* Card.xcdatamodel */,
+			);
+			currentVersion = 11BD21E818C8405A004062F3 /* Card.xcdatamodel */;
+			name = Card.xcdatamodeld;
+			path = ../Card.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 07CA04BE18C1837A00FA0BCB /* Project object */;
 }
