@@ -11,5 +11,11 @@
 @interface NSPlayerOperationQueue : NSObject
 
 @property (nonatomic) NSInteger numberOfSequentialQueues;
+@property (nonatomic) BOOL isDoingStuff;
+
+@property (nonatomic) NSInteger indexOfCard;
+@property (nonatomic) NSInteger indexOfMethod;
+@property (nonatomic) NSInteger masterIterations;
+@property (nonatomic) NSInteger iterationsPerformed;
 
 @end

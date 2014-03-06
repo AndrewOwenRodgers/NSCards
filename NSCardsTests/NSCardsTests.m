@@ -58,4 +58,14 @@
 	XCTAssert(gameEngine.devicePlayer.canTouchBoard != gameEngine.opponent.canTouchBoard);
 }
 
+-(void)testPlayACard
+{
+	TurnEngine *gameEngine = [TurnEngine sharedEngine];
+	[gameEngine setUpBoard];
+	[gameEngine.devicePlayer playCardAtIndex:2];
+	
+	XCTAssert(gameEngine.devicePlayer.cardsInHand.count == 4);
+	XCTAssert(gameEngine.board.cardsInPlay.count == 1);
+}
+
 @end

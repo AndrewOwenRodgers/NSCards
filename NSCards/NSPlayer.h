@@ -24,5 +24,6 @@
 
 -(id)initWithColor:(BOOL)color;
 -(void)drawCard;
+-(void)playCardAtIndex:(NSInteger)cardIndex;
 
 @end

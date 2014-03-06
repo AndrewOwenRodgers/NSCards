@@ -38,4 +38,11 @@
 	[self.cardsInHand addObject:drawnCard];
 }
 
+-(void)playCardAtIndex:(NSInteger)cardIndex
+{
+	NSCard *cardToPlay = self.cardsInHand[cardIndex];
+	[self.cardsInHand removeObjectAtIndex:cardIndex];
+	[self.gameEngine.board.cardsInPlay addObject:cardToPlay];
+}
+
 @end
