@@ -1,5 +1,5 @@
 //
-//  NewCard.h
+//  CardCells.h
 //  NSCards
 //
 //  Created by Chad D Colby on 3/6/14.
@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AMDraggableBlurView.h"
 
-@interface NewCard : UICollectionViewCell
+@interface CardCells : UICollectionViewCell
 
+@property (strong, nonatomic) AMDraggableBlurView *cardView;
 
 @end

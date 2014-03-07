@@ -9,8 +9,11 @@
 #import "GameBoardViewController.h"
 #import "QueuesCells.h"
 #import "Headers.h"
+#import "CardCells.h"
 
 @interface GameBoardViewController ()
+
+@property (strong, nonatomic) AMDraggableBlurView *tempCard;
 
 @end
 
@@ -22,6 +25,8 @@
     
     self.collectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
     [self.collectionView registerClass:[QueuesCells class] forCellWithReuseIdentifier:@"Cell"];
+    [self.collectionView registerClass:[CardCells class] forCellWithReuseIdentifier:@"Cell"];
+    
 
 }
 
@@ -66,7 +71,11 @@
     QueuesCells *queueCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     cell.alpha = 0.5f;
     queueCell.alpha = 0.5f;
-
+    cell.layer.masksToBounds = YES;
+    cell.layer.cornerRadius = 10.0f;
+    queueCell.layer.masksToBounds = YES;
+    queueCell.layer.cornerRadius = 10.0f;
+    
     
     switch (indexPath.section) {
        case 0:
@@ -80,7 +89,13 @@
             queueCell.backgroundColor = [UIColor whiteColor];
             return queueCell;
         case 3:
-            cell.backgroundColor = [UIColor whiteColor];
+            cell.backgroundColor = [UIColor clearColor];
+            
+            if (indexPath.row < 5) {
+            
+            [self createCardsAtPoint:cell.frame];
+            }
+            
             if (indexPath.row == 5) {
             
                 UIButton *flipTheCard = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -89,6 +104,7 @@
                 [flipTheCard setTitle:@"Flip Card" forState:UIControlStateNormal];
                 [self.collectionView addSubview:flipTheCard];
                 cell.userInteractionEnabled = NO;
+                cell.backgroundColor = [UIColor whiteColor];
            }
             return cell;
         default:
@@ -97,8 +113,35 @@
     }
 }
 
+- (AMDraggableBlurView *)createCardsAtPoint:(CGRect)placement
+{
+    AMDraggableBlurView *tempCard = [[AMDraggableBlurView alloc] init];
+    [tempCard setDraggable:YES];
+    tempCard.userInteractionEnabled = YES;
+    tempCard.layer.masksToBounds = YES;
+    tempCard.layer.cornerRadius = 10.0f;
+    tempCard.frame = placement;
+    tempCard.alpha = 0.5f;
+   
+    
+//    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(tempCard.frame.origin.x, tempCard.frame.origin.y, 80, 30)];
+//    titleLabel.text = @"NSCards";
+   
+    [self.view addSubview:tempCard];
+//    [tempCard addSubview:titleLabel];
+    return tempCard;
+}
+
 - (void)flipNewCard:(UIButton *)sender
 {
+    AMDraggableBlurView *anotherCard = [self createCardsAtPoint:CGRectMake(600, 860, 100, 150)];
+    [anotherCard setDraggable:YES];
+    anotherCard.userInteractionEnabled = YES;
+    anotherCard.layer.masksToBounds = YES;
+    anotherCard.layer.cornerRadius = 10.0f;
+    anotherCard.alpha = 0.5f;
+    [self.view addSubview:anotherCard];
+    
     NSLog(@"Pressed");
 }
 
@@ -119,23 +162,28 @@
 {
     UICollectionReusableView *dockHeader = nil;
     
-    if (kind == UICollectionElementKindSectionHeader) {
-        Headers *titleHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header" forIndexPath:indexPath];
+    
+        if (kind == UICollectionElementKindSectionHeader) {
+            Headers *titleHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header" forIndexPath:indexPath];
         
-        titleHeader.headerLabel.text = @"Your Cards";
-        titleHeader.headerLabel.textColor = [UIColor blueColor];
+            titleHeader.headerLabel.text = @"Your Cards";
+            titleHeader.headerLabel.textColor = [UIColor blueColor];
 
-        titleHeader.backgroundColor = [UIColor clearColor];
+            titleHeader.backgroundColor = [UIColor clearColor];
         
-        dockHeader = titleHeader;
+            dockHeader = titleHeader;
+        if (indexPath.section == 3) {
         
-        UIButton *finishTurnButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [finishTurnButton addTarget:self action:@selector(sendMove:) forControlEvents:UIControlEventTouchUpInside];
-        finishTurnButton.frame = CGRectMake(titleHeader.frame.origin.x + 50, titleHeader.frame.origin.y, 100, 40);
-        [finishTurnButton setTitle:@"Send Move" forState:UIControlStateNormal];
-        finishTurnButton.backgroundColor = [UIColor whiteColor];
-        finishTurnButton.alpha = 0.4f;
-        [self.collectionView addSubview:finishTurnButton];
+            UIButton *finishTurnButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+            [finishTurnButton addTarget:self action:@selector(sendMove:) forControlEvents:UIControlEventTouchUpInside];
+            finishTurnButton.frame = CGRectMake(titleHeader.frame.origin.x + 50, titleHeader.frame.origin.y, 100, 40);
+            [finishTurnButton setTitle:@"Send Move" forState:UIControlStateNormal];
+            finishTurnButton.backgroundColor = [UIColor whiteColor];
+            finishTurnButton.alpha = 0.4f;
+
+            [self.collectionView addSubview:finishTurnButton];
+        }
+        
     }
     
 
@@ -163,13 +211,6 @@
     return  edges;
 }
 
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-//{
-//    if (section == 1 || section == 2) {
-//        
-//    }
-//}
-
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     CGSize headerSize;
@@ -188,19 +229,25 @@
     return YES;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath
+//- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
+//    
+//    if (indexPath.section == 3) {
+//        
+//        if (!selectedCell.isSelected) {
+//            selectedCell.backgroundColor = [UIColor whiteColor];
+//        } else {
+//            selectedCell.backgroundColor = [UIColor redColor];
+//
+//        }
+//    }
+//}
+
+- (void)snapBackToOrigin
 {
-    UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
     
-    if (!selectedCell.isSelected) {
-        selectedCell.backgroundColor = [UIColor whiteColor];
-    } else {
-        selectedCell.backgroundColor = [UIColor redColor];
-
-    }
 }
-
-
 
 
 @end

@@ -8,19 +8,25 @@
 
 #import "QueuesCells.h"
 
+
+@interface QueuesCells ()
+
+
+
+@end
+
 @implementation QueuesCells
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        self.clipsToBounds = YES;
-        self.layer.cornerRadius = 10.0f;
+
         
     }
     return self;
 }
+
 
 
 @end

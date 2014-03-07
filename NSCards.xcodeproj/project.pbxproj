@@ -22,12 +22,13 @@
 		07CA04EB18C1837A00FA0BCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CA04CD18C1837A00FA0BCB /* UIKit.framework */; };
 		07CA04F318C1837A00FA0BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07CA04F118C1837A00FA0BCB /* InfoPlist.strings */; };
 		07CA04F518C1837A00FA0BCB /* NSCardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CA04F418C1837A00FA0BCB /* NSCardsTests.m */; };
+		8D18335F18C9595400563C7D /* CardCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D18335E18C9595400563C7D /* CardCells.m */; };
 		8D1B945518C8E5AC00A351BD /* GameBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B945418C8E5AC00A351BD /* GameBoardViewController.m */; };
 		8D1B945818C8EA3700A351BD /* QueuesCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B945718C8EA3700A351BD /* QueuesCells.m */; };
 		8D1B945E18C8FD5F00A351BD /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1B945D18C8FD5F00A351BD /* bg.png */; };
 		8D296EF718C7A3C10035E9F4 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D296EF618C7A3C10035E9F4 /* iPad.storyboard */; };
 		8D9D6FC118C925D5003504DB /* Headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D6FC018C925D5003504DB /* Headers.m */; };
-		8D9D6FC418C934C2003504DB /* NewCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D6FC318C934C2003504DB /* NewCard.m */; };
+		A556412140FC4A0CB2461AB7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0139FC0CB3874C0FA4221CCB /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0139FC0CB3874C0FA4221CCB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0763B5C118C653BE007F783C /* Rules and Card Lists.pages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Rules and Card Lists.pages"; sourceTree = "<group>"; };
 		07CA04C618C1837A00FA0BCB /* NSCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CA04C918C1837A00FA0BCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +63,8 @@
 		07CA04F018C1837A00FA0BCB /* NSCardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSCardsTests-Info.plist"; sourceTree = "<group>"; };
 		07CA04F218C1837A00FA0BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07CA04F418C1837A00FA0BCB /* NSCardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCardsTests.m; sourceTree = "<group>"; };
+		8D18335D18C9595400563C7D /* CardCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCells.h; sourceTree = "<group>"; };
+		8D18335E18C9595400563C7D /* CardCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCells.m; sourceTree = "<group>"; };
 		8D1B945318C8E5AC00A351BD /* GameBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoardViewController.h; sourceTree = "<group>"; };
 		8D1B945418C8E5AC00A351BD /* GameBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoardViewController.m; sourceTree = "<group>"; };
 		8D1B945618C8EA3700A351BD /* QueuesCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueuesCells.h; sourceTree = "<group>"; };
@@ -69,8 +73,7 @@
 		8D296EF618C7A3C10035E9F4 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad.storyboard; path = ../iPad.storyboard; sourceTree = "<group>"; };
 		8D9D6FBF18C925D5003504DB /* Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 		8D9D6FC018C925D5003504DB /* Headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Headers.m; sourceTree = "<group>"; };
-		8D9D6FC218C934C2003504DB /* NewCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCard.h; sourceTree = "<group>"; };
-		8D9D6FC318C934C2003504DB /* NewCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCard.m; sourceTree = "<group>"; };
+		9260315383204FB7B6E1CBC2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 				07CA04CC18C1837A00FA0BCB /* CoreGraphics.framework in Frameworks */,
 				07CA04CE18C1837A00FA0BCB /* UIKit.framework in Frameworks */,
 				07CA04CA18C1837A00FA0BCB /* Foundation.framework in Frameworks */,
+				A556412140FC4A0CB2461AB7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 				07CA04EE18C1837A00FA0BCB /* NSCardsTests */,
 				07CA04C818C1837A00FA0BCB /* Frameworks */,
 				07CA04C718C1837A00FA0BCB /* Products */,
+				9260315383204FB7B6E1CBC2 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +128,7 @@
 				07CA04CB18C1837A00FA0BCB /* CoreGraphics.framework */,
 				07CA04CD18C1837A00FA0BCB /* UIKit.framework */,
 				07CA04E818C1837A00FA0BCB /* XCTest.framework */,
+				0139FC0CB3874C0FA4221CCB /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,8 +184,8 @@
 			children = (
 				8D1B945318C8E5AC00A351BD /* GameBoardViewController.h */,
 				8D1B945418C8E5AC00A351BD /* GameBoardViewController.m */,
-				8D9D6FC218C934C2003504DB /* NewCard.h */,
-				8D9D6FC318C934C2003504DB /* NewCard.m */,
+				8D18335D18C9595400563C7D /* CardCells.h */,
+				8D18335E18C9595400563C7D /* CardCells.m */,
 				8D296EF618C7A3C10035E9F4 /* iPad.storyboard */,
 				8D9D6FBF18C925D5003504DB /* Headers.h */,
 				8D9D6FC018C925D5003504DB /* Headers.m */,
@@ -196,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07CA04F818C1837A00FA0BCB /* Build configuration list for PBXNativeTarget "NSCards" */;
 			buildPhases = (
+				A9100CE9BEA74B6298665319 /* Check Pods Manifest.lock */,
 				07CA04C218C1837A00FA0BCB /* Sources */,
 				07CA04C318C1837A00FA0BCB /* Frameworks */,
 				07CA04C418C1837A00FA0BCB /* Resources */,
+				B3E4B644649B43B7A5CAA916 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +292,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A9100CE9BEA74B6298665319 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3E4B644649B43B7A5CAA916 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07CA04C218C1837A00FA0BCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -292,9 +333,9 @@
 				8D9D6FC118C925D5003504DB /* Headers.m in Sources */,
 				07CA04E018C1837A00FA0BCB /* ViewController.m in Sources */,
 				8D1B945518C8E5AC00A351BD /* GameBoardViewController.m in Sources */,
-				8D9D6FC418C934C2003504DB /* NewCard.m in Sources */,
 				07CA04DA18C1837A00FA0BCB /* AppDelegate.m in Sources */,
 				07CA04D618C1837A00FA0BCB /* main.m in Sources */,
+				8D18335F18C9595400563C7D /* CardCells.m in Sources */,
 				8D1B945818C8EA3700A351BD /* QueuesCells.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +460,7 @@
 		};
 		07CA04F918C1837A00FA0BCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9260315383204FB7B6E1CBC2 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -434,6 +476,7 @@
 		};
 		07CA04FA18C1837A00FA0BCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9260315383204FB7B6E1CBC2 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
