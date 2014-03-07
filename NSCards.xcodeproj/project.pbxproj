@@ -27,6 +27,7 @@
 		8D1B945E18C8FD5F00A351BD /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D1B945D18C8FD5F00A351BD /* bg.png */; };
 		8D296EF718C7A3C10035E9F4 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D296EF618C7A3C10035E9F4 /* iPad.storyboard */; };
 		8D9D6FC118C925D5003504DB /* Headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D6FC018C925D5003504DB /* Headers.m */; };
+		8D9D6FC418C934C2003504DB /* NewCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D6FC318C934C2003504DB /* NewCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		8D296EF618C7A3C10035E9F4 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad.storyboard; path = ../iPad.storyboard; sourceTree = "<group>"; };
 		8D9D6FBF18C925D5003504DB /* Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 		8D9D6FC018C925D5003504DB /* Headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Headers.m; sourceTree = "<group>"; };
+		8D9D6FC218C934C2003504DB /* NewCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCard.h; sourceTree = "<group>"; };
+		8D9D6FC318C934C2003504DB /* NewCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 			children = (
 				8D1B945318C8E5AC00A351BD /* GameBoardViewController.h */,
 				8D1B945418C8E5AC00A351BD /* GameBoardViewController.m */,
+				8D9D6FC218C934C2003504DB /* NewCard.h */,
+				8D9D6FC318C934C2003504DB /* NewCard.m */,
 				8D296EF618C7A3C10035E9F4 /* iPad.storyboard */,
 				8D9D6FBF18C925D5003504DB /* Headers.h */,
 				8D9D6FC018C925D5003504DB /* Headers.m */,
@@ -287,6 +292,7 @@
 				8D9D6FC118C925D5003504DB /* Headers.m in Sources */,
 				07CA04E018C1837A00FA0BCB /* ViewController.m in Sources */,
 				8D1B945518C8E5AC00A351BD /* GameBoardViewController.m in Sources */,
+				8D9D6FC418C934C2003504DB /* NewCard.m in Sources */,
 				07CA04DA18C1837A00FA0BCB /* AppDelegate.m in Sources */,
 				07CA04D618C1837A00FA0BCB /* main.m in Sources */,
 				8D1B945818C8EA3700A351BD /* QueuesCells.m in Sources */,

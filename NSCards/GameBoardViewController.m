@@ -50,7 +50,7 @@
             numberOfSection = 4;
             break;
         case 3:
-            numberOfSection = 5;
+            numberOfSection = 6;
             break;
             
         default:
@@ -64,8 +64,8 @@
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     QueuesCells *queueCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.alpha = 0.6f;
-    queueCell.alpha = 0.6f;
+    cell.alpha = 0.5f;
+    queueCell.alpha = 0.5f;
 
     
     switch (indexPath.section) {
@@ -81,11 +81,25 @@
             return queueCell;
         case 3:
             cell.backgroundColor = [UIColor whiteColor];
+            if (indexPath.row == 5) {
+            
+                UIButton *flipTheCard = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+                [flipTheCard addTarget:self action:@selector(flipNewCard:) forControlEvents:UIControlEventTouchUpInside];
+                flipTheCard.frame = CGRectMake(cell.frame.origin.x + 10, cell.frame.origin.y + 60, 80, 30);
+                [flipTheCard setTitle:@"Flip Card" forState:UIControlStateNormal];
+                [self.collectionView addSubview:flipTheCard];
+                cell.userInteractionEnabled = NO;
+           }
             return cell;
         default:
             return cell;
             break;
     }
+}
+
+- (void)flipNewCard:(UIButton *)sender
+{
+    NSLog(@"Pressed");
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -108,12 +122,20 @@
     if (kind == UICollectionElementKindSectionHeader) {
         Headers *titleHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"Header" forIndexPath:indexPath];
         
-        titleHeader.headerLabel.text = @"Player Dock";
+        titleHeader.headerLabel.text = @"Your Cards";
+        titleHeader.headerLabel.textColor = [UIColor blueColor];
 
-        titleHeader.backgroundColor = [UIColor whiteColor];
+        titleHeader.backgroundColor = [UIColor clearColor];
         
         dockHeader = titleHeader;
-        dockHeader.alpha = 0.5f;
+        
+        UIButton *finishTurnButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [finishTurnButton addTarget:self action:@selector(sendMove:) forControlEvents:UIControlEventTouchUpInside];
+        finishTurnButton.frame = CGRectMake(titleHeader.frame.origin.x + 50, titleHeader.frame.origin.y, 100, 40);
+        [finishTurnButton setTitle:@"Send Move" forState:UIControlStateNormal];
+        finishTurnButton.backgroundColor = [UIColor whiteColor];
+        finishTurnButton.alpha = 0.4f;
+        [self.collectionView addSubview:finishTurnButton];
     }
     
 
@@ -122,6 +144,10 @@
     
 }
 
+- (void)sendMove:(UIButton *)sender
+{
+    NSLog(@"Move Sent");
+}
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
@@ -136,6 +162,13 @@
     }
     return  edges;
 }
+
+//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+//{
+//    if (section == 1 || section == 2) {
+//        
+//    }
+//}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
