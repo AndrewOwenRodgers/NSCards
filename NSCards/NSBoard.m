@@ -51,6 +51,7 @@
 
 -(void)performPlayerMethods
 {
+	//Checks to see whether we should be performing the methods for player 1 or player 2
 	if ((self.gameEngine.devicePlayer.canTouchBoard && self.gameEngine.devicePlayer.isWhitePlayer) || (self.gameEngine.opponent.canTouchBoard && self.gameEngine.opponent.isWhitePlayer))
 	{
 		for (NSPlayerOperationQueue *queue in self.whitePlayerThreads)
@@ -61,6 +62,8 @@
 				if (queue.iterationsPerformed >= queue.masterIterations)
 				{
 					[[self.cardsInPlay objectAtIndex:queue.indexOfCard] performMethod];
+					queue.iterationsPerformed = 0;
+					queue.masterIterations = 0;
 				}
 			}
 		}
@@ -75,6 +78,8 @@
 				if (queue.iterationsPerformed >= queue.masterIterations)
 				{
 					[[self.cardsInPlay objectAtIndex:queue.indexOfCard] performMethod];
+					queue.iterationsPerformed = 0;
+					queue.masterIterations = 0;
 				}
 			}
 		}
@@ -83,7 +88,26 @@
 
 -(void)resetPlayerQueue
 {
-	
+	if ((self.gameEngine.devicePlayer.canTouchBoard && self.gameEngine.devicePlayer.isWhitePlayer) || (self.gameEngine.opponent.canTouchBoard && self.gameEngine.opponent.isWhitePlayer))
+	{
+		for (NSPlayerOperationQueue *queue in self.whitePlayerThreads)
+		{
+			if (queue.masterIterations == 0)
+			{
+				queue.isDoingStuff = FALSE;
+			}
+		}
+	}
+	else
+	{
+		for (NSPlayerOperationQueue *queue in self.blackPlayerThreads)
+		{
+			if (queue.masterIterations == 0)
+			{
+				queue.isDoingStuff = FALSE;
+			}
+		}
+	}
 }
 
 @end

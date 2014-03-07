@@ -21,7 +21,7 @@
 @property (strong, nonatomic) NSMutableArray *cardsInHand;
 @property (strong, nonatomic) NSMutableArray *deck;
 @property (weak, nonatomic) NSMutableArray *threads;
-@property (nonatomic) NSInteger *blockedCounter;
+@property (nonatomic) NSInteger blockedCounter;
 
 -(id)initWithColor:(BOOL)color;
 -(void)drawCard;

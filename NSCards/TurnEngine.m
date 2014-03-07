@@ -74,24 +74,43 @@
 	{
 		if (!queue.isDoingStuff)
 		{
-			
+			allQueuesBlocked = FALSE;
+			break;
 		}
 	}
 	if (allQueuesBlocked)
 	{
-		self.whitePlayerWon = self.devicePlayer.isWhitePlayer;
-		return TRUE;
+		if (self.opponent.blockedCounter > 2)
+		{
+			self.whitePlayerWon = self.opponent.isWhitePlayer;
+			return TRUE;
+		}
+		else
+		{
+			self.opponent.blockedCounter += 1;
+		}
 	}
 	
 	allQueuesBlocked = TRUE;
 	for(NSPlayerOperationQueue *queue in self.devicePlayer.threads)
 	{
-		
+		if (!queue.isDoingStuff)
+		{
+			allQueuesBlocked = FALSE;
+			break;
+		}
 	}
 	if (allQueuesBlocked)
 	{
-		self.whitePlayerWon = self.opponent.isWhitePlayer;
-		return TRUE;
+		if (self.devicePlayer.blockedCounter > 2)
+		{
+			self.whitePlayerWon = self.opponent.isWhitePlayer;
+			return TRUE;
+		}
+		else
+		{
+			self.devicePlayer.blockedCounter += 1;
+		}
 	}
 	return FALSE;
 }
