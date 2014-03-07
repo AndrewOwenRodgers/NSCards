@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "TurnEngine.h"
 
 @interface NSCardsTests : XCTestCase
 
@@ -17,19 +18,54 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample
+-(void)testGameStart
 {
-    NSString *doNothingTest = @"This Test Does Nothing";
-    XCTAssertNotNil(doNothingTest, @"Foundation is broken, duck and cover!");
+	TurnEngine *gameEngine = [TurnEngine sharedEngine];
+	[gameEngine setUpBoard];
+	
+	XCTAssertNotNil(gameEngine.devicePlayer);
+	XCTAssertNotNil(gameEngine.opponent);
+	
+	XCTAssertNotEqual(gameEngine.devicePlayer.isWhitePlayer, gameEngine.opponent.isWhitePlayer);
+
+	XCTAssertTrue(gameEngine.devicePlayer.cardsInHand.count == 5);
+	XCTAssertTrue(gameEngine.devicePlayer.deck.count == 25);
+	
+	XCTAssertNotEqualObjects(gameEngine.devicePlayer.displayName, gameEngine.opponent.displayName);
+	
+	XCTAssert(gameEngine.board.whitePlayerThreads.count == 2);
+	XCTAssert(gameEngine.board.blackPlayerThreads.count == 2);
+	XCTAssert(gameEngine.devicePlayer.threads.count == 2);
+	XCTAssert(gameEngine.opponent.threads.count == 2);
+}
+
+-(void)testChangeTurns
+{
+	TurnEngine *gameEngine = [TurnEngine sharedEngine];
+	[gameEngine setUpBoard];
+	
+	BOOL couldTouchBoard = gameEngine.devicePlayer.canTouchBoard;
+	[gameEngine endTurn];
+	
+	XCTAssert(gameEngine.devicePlayer.canTouchBoard != couldTouchBoard);
+	XCTAssert(gameEngine.devicePlayer.canTouchBoard != gameEngine.opponent.canTouchBoard);
+}
+
+-(void)testPlayACard
+{
+	TurnEngine *gameEngine = [TurnEngine sharedEngine];
+	[gameEngine setUpBoard];
+	[gameEngine.devicePlayer playCardAtIndex:2];
+	
+	XCTAssert(gameEngine.devicePlayer.cardsInHand.count == 4);
+	XCTAssert(gameEngine.board.cardsInPlay.count == 1);
 }
 
 @end
