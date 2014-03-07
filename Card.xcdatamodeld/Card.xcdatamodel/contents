@@ -3,6 +3,7 @@
     <entity name="NSCard" representedClassName="NSCard" syncable="YES">
         <attribute name="cardRelationships" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="cycleCount" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="isDuplicate" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="isWhiteCard" attributeType="Boolean" syncable="YES"/>
         <attribute name="retain_Count" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="cardTemplate" maxCount="1" deletionRule="Nullify" destinationEntity="NSCardType" inverseName="cardInstances" inverseEntity="NSCardType" syncable="YES"/>
@@ -15,7 +16,7 @@
         <relationship name="cardInstances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NSCard" inverseName="cardTemplate" inverseEntity="NSCard" syncable="YES"/>
     </entity>
     <elements>
-        <element name="NSCard" positionX="-8226" positionY="-886" width="128" height="118"/>
+        <element name="NSCard" positionX="-8226" positionY="-900" width="128" height="133"/>
         <element name="NSCardType" positionX="-8451" positionY="-904" width="128" height="118"/>
     </elements>
 </model>

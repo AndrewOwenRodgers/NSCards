@@ -13,10 +13,17 @@
 
 @interface NSCard : NSManagedObject
 
-@property (nonatomic) BOOL isWhiteCard;
-@property (nonatomic) int cycleCount;
+@property (nonatomic, retain) id cardRelationships;
 @property (nonatomic) int retain_Count;
-@property (nonatomic, retain) NSDictionary *cardRelationships;
+@property (nonatomic) int cycleCount;
+@property (nonatomic) BOOL isWhiteCard;
+@property (nonatomic) BOOL isDuplicate;
 @property (nonatomic, retain) NSCardType *cardTemplate;
+
+- (NSDictionary *) getBlankGameInitDictionary;
+- (BOOL) gameInitCardWithValues: (NSDictionary *) GameInitDictionary;
+- (void) performGameMethodForGameSelector: (NSString *) gameSelectorToPerform;
+- (NSCard *) initWithCardType: (NSCardType *) cardType;
+- (BOOL) performGameMethod;
 
 @end

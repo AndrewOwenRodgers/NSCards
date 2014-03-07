@@ -12,10 +12,36 @@
 
 @implementation NSCard
 
-@dynamic isWhiteCard;
-@dynamic cycleCount;
-@dynamic retain_Count;
 @dynamic cardRelationships;
+@dynamic cycleCount;
+@dynamic isWhiteCard;
+@dynamic retain_Count;
+@dynamic isDuplicate;
 @dynamic cardTemplate;
+
+- (BOOL) performGameMethod {
+    return true; // shutting the compiler up
+}
+
+- (NSDictionary *) getBlankGameInitDictionary
+{
+
+    NSString *currentCardType = self.cardTemplate.cardClassName;
+
+    NSDictionary *requiredDictionary;
+
+    return [NSDictionary new]; //shutting CLANG up while I code.
+}
+
+- (BOOL) gameInitCardWithValues: (NSDictionary *) GameInitDictionary
+{
+
+    return false; //shutting CLANG up while I code.
+}
+
+- (void) performGameMethodForGameSelector: (NSString *) gameSelectorToPerform
+{
+
+}
 
 @end
