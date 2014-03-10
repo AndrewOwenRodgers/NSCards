@@ -21,6 +21,8 @@
 		self.cardsInPlay = [[NSMutableArray alloc] init];
 	}
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteQueue:) name:@"Delete queue" object:nil];
+	
 	return self;
 }
 
@@ -107,6 +109,26 @@
 				queue.isDoingStuff = FALSE;
 			}
 		}
+	}
+}
+
+-(void)deleteQueue:(NSNotification *)notification
+{
+	NSDictionary *queueDict = notification.object;
+	NSNumber *queueNum = [queueDict objectForKey:@"index"];
+	NSNumber *isWhiteQueue = [queueDict objectForKey:@"isWhite"];
+	
+	NSDictionary *passDictionaryForCard = [NSDictionary alloc] initWithObjectsAndKeys:@[queueNum : @"index", isWhiteQueue : @"isWhiteQueue", nil]];
+	
+	if ([isWhiteQueue boolValue])
+	{
+		[self.whitePlayerThreads removeObjectAtIndex:[queueNum integerValue]];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"deletedQueue" object:passDictionaryForCard];
+	}
+	else
+	{
+		[self.blackPlayerThreads removeObjectAtIndex:[queueNum integerValue]];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"deletedQueue" object:passDictionaryForCard];
 	}
 }
 
