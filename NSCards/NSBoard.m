@@ -118,7 +118,7 @@
 	NSNumber *queueNum = [queueDict objectForKey:@"index"];
 	NSNumber *isWhiteQueue = [queueDict objectForKey:@"isWhite"];
 	
-	NSDictionary *passDictionaryForCard = [NSDictionary alloc] initWithObjectsAndKeys:@[queueNum : @"index", isWhiteQueue : @"isWhiteQueue", nil]];
+	NSDictionary *passDictionaryForCard = [[NSDictionary alloc] initWithObjectsAndKeys:@[queueNum, @"index", isWhiteQueue, @"isWhiteQueue"], nil];
 	
 	if ([isWhiteQueue boolValue])
 	{
