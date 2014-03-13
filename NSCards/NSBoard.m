@@ -63,7 +63,7 @@
 				queue.iterationsPerformed += queue.numberOfSequentialQueues;
 				if (queue.iterationsPerformed >= queue.masterIterations)
 				{
-					[[self.cardsInPlay objectAtIndex:queue.indexOfCard] performMethod];
+					[[self.cardsInPlay objectAtIndex:queue.indexOfCard] performGameMethod];
 					queue.iterationsPerformed = 0;
 					queue.masterIterations = 0;
 				}
@@ -79,7 +79,7 @@
 				queue.iterationsPerformed += queue.numberOfSequentialQueues;
 				if (queue.iterationsPerformed >= queue.masterIterations)
 				{
-					[[self.cardsInPlay objectAtIndex:queue.indexOfCard] performMethod];
+					[[self.cardsInPlay objectAtIndex:queue.indexOfCard] performGameMethod];
 					queue.iterationsPerformed = 0;
 					queue.masterIterations = 0;
 				}
