@@ -17,7 +17,7 @@ typedef enum cardType {
     property = 2
 } cardType;
 
-@interface NSCardType : NSManagedObject
+@interface NSCardType : NSObject
 
 @property (nonatomic, retain) NSString * cardClassInheritsFrom;
 @property (nonatomic, retain) NSString * cardClassName;

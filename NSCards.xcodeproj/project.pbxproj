@@ -30,7 +30,6 @@
 		11AB05C518C998F0007EB943 /* NSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AB05C418C998F0007EB943 /* NSCard.m */; };
 		11AB05C918C9A659007EB943 /* cardTemplates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AB05C818C9A659007EB943 /* cardTemplates.plist */; };
 		11AB05CB18CA1AA9007EB943 /* cardStacks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AB05CA18CA1AA9007EB943 /* cardStacks.plist */; };
-		11BD21E918C8405A004062F3 /* Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BD21E718C8405A004062F3 /* Card.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +77,6 @@
 		11AB05C418C998F0007EB943 /* NSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCard.m; sourceTree = "<group>"; };
 		11AB05C818C9A659007EB943 /* cardTemplates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cardTemplates.plist; sourceTree = "<group>"; };
 		11AB05CA18CA1AA9007EB943 /* cardStacks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cardStacks.plist; sourceTree = "<group>"; };
-		11BD21E818C8405A004062F3 /* Card.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Card.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +203,6 @@
 				11AB05CA18CA1AA9007EB943 /* cardStacks.plist */,
 				11AB05C018C998F0007EB943 /* NSCardType.h */,
 				11AB05C118C998F0007EB943 /* NSCardType.m */,
-				11BD21E718C8405A004062F3 /* Card.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,7 +251,7 @@
 		07CA04BE18C1837A00FA0BCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Andrew Rodgers";
 				TargetAttributes = {
 					07CA04E618C1837A00FA0BCB = {
@@ -314,7 +311,6 @@
 				07111A4118C6971F005590D1 /* NSPlayer.m in Sources */,
 				07CA04E018C1837A00FA0BCB /* ViewController.m in Sources */,
 				07CA04DA18C1837A00FA0BCB /* AppDelegate.m in Sources */,
-				11BD21E918C8405A004062F3 /* Card.xcdatamodeld in Sources */,
 				07B8C02518C6553600196B91 /* TurnEngine.m in Sources */,
 				07CA04D618C1837A00FA0BCB /* main.m in Sources */,
 				070BA98D18C69FF700784D5D /* NSBoard.m in Sources */,
@@ -365,7 +361,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -404,7 +399,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -466,7 +460,6 @@
 		07CA04FC18C1837A00FA0BCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSCards.app/NSCards";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -489,7 +482,6 @@
 		07CA04FD18C1837A00FA0BCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSCards.app/NSCards";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -536,20 +528,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		11BD21E718C8405A004062F3 /* Card.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				11BD21E818C8405A004062F3 /* Card.xcdatamodel */,
-			);
-			currentVersion = 11BD21E818C8405A004062F3 /* Card.xcdatamodel */;
-			name = Card.xcdatamodeld;
-			path = ../Card.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 07CA04BE18C1837A00FA0BCB /* Project object */;
 }

@@ -11,7 +11,7 @@
 
 @class NSCardType;
 
-@interface NSCard : NSManagedObject
+@interface NSCard : NSObject
 
 @property (nonatomic, retain) id cardRelationships;
 @property (nonatomic) int retain_Count;
