@@ -26,9 +26,9 @@
 - (NSDictionary *) getBlankGameInitDictionary
 {
 
-    NSString *currentCardType = self.cardTemplate.cardClassName;
+//    NSString *currentCardType = self.cardTemplate.cardClassName;
 
-    NSDictionary *requiredDictionary;
+  //  NSDictionary *requiredDictionary;
 
     return [NSDictionary new]; //shutting CLANG up while I code.
 }
@@ -42,6 +42,11 @@
 - (void) performGameMethodForGameSelector: (NSString *) gameSelectorToPerform
 {
 
+}
+
+- (NSCard *) initWithCardType: (NSCardType *) cardType {
+
+    return [NSCard init];
 }
 
 @end

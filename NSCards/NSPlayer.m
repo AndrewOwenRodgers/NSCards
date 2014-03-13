@@ -62,7 +62,7 @@
     NSArray *cardNames =  [cards allKeys];
 
     for (NSString *cardName in cardNames) {
-        int numberOfCards = [[cards objectForKey:cardName] integerValue];
+        NSInteger numberOfCards = [[cards objectForKey:cardName] integerValue];
         NSCardType *cardType = [templateDictionary objectForKey:cardName];
         for(int i=0; i < (numberOfCards - 1); i++) {
             NSCard *newCard = [[NSCard alloc] initWithCardType:cardType];
@@ -73,7 +73,7 @@
     if ([[cardStack objectForKey:@"sortType"] isEqualToString:@"random"]) {
         NSInteger arrayLen = [newDeck count];
         for (NSInteger i = 0; i < arrayLen; i++) {
-            NSInteger randInt = arc4random_uniform(arrayLen - i) + i;
+            NSInteger randInt = arc4random_uniform((u_int32_t)(arrayLen - i)) + i;
             [newDeck exchangeObjectAtIndex:i withObjectAtIndex:randInt];
         };
 
