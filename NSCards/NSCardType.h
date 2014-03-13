@@ -17,13 +17,13 @@ typedef enum cardType {
     property = 2
 } cardType;
 
-@interface NSCardType : NSManagedObject
+@interface NSCardType : NSObject
 
 @property (nonatomic, retain) NSString * cardClassInheritsFrom;
 @property (nonatomic, retain) NSString * cardClassName;
 @property (nonatomic, retain) NSString * cardDescription;
 @property (nonatomic) cardType cardType;
-@property (nonatomic, retain) NSSet * cardInstances;
+@property (nonatomic, retain) NSSet *cardInstances;
 @end
 
 @interface NSCardType (CoreDataGeneratedAccessors)
@@ -32,5 +32,6 @@ typedef enum cardType {
 - (void)removeCardInstancesObject:(NSCard *)value;
 - (void)addCardInstances:(NSSet *)values;
 - (void)removeCardInstances:(NSSet *)values;
+- (NSCardType *)initWithDictionary: (NSDictionary *) cardTypeDefinition;
 
 @end

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSArray</key>
+	<dict>
+		<key>name</key>
+		<string>NSArray</string>
+		<key>InitDictionary</key>
+		<dict>
+			<key>objects</key>
+			<array/>
+		</dict>
+	</dict>
+	<key>NSData</key>
+	<dict>
+		<key>name</key>
+		<string>NSData</string>
+		<key>initDictionary</key>
+		<dict>
+			<key>object</key>
+			<data></data>
+		</dict>
+	</dict>
+	<key>NSCoder</key>
+	<dict>
+		<key>name</key>
+		<string>NSCoder</string>
+		<key>initDictionary</key>
+		<dict/>
+	</dict>
+	<key>NSKeyedArchiver</key>
+	<dict>
+		<key>name</key>
+		<string>NSKeyedArchiver</string>
+		<key>initDictionary</key>
+		<dict>
+			<key>object</key>
+			<data></data>
+			<key>file</key>
+			<string></string>
+		</dict>
+	</dict>
+</dict>
+</plist>
